@@ -465,3 +465,21 @@ render();
   UI.setArrow(10, 'darkgoldenrod');
   UI.setCircle(10, 'darkgoldenrod');
 })(window, document);
+
+// Export JSON
+(function() {
+  function handleExportJsonClick(e) {
+    console.log(localStorage.getItem(`${RENDER_OPTIONS.documentId}/annotations`));
+  }
+  document.querySelector('button#exportJson').addEventListener('click', handleExportJsonClick);
+})();
+
+// Import JSON
+(function() {
+  function handleImportJsonClick(e) {
+    let json = window.prompt("Enter JSON:");
+    localStorage.setItem(`${RENDER_OPTIONS.documentId}/annotations`, json);
+    render();
+  }
+  document.querySelector('button#importJson').addEventListener('click', handleImportJsonClick);
+})();

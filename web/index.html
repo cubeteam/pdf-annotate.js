@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8" />
   <title>PDFJSAnnotate</title>
-  <link rel="stylesheet" type="text/css" href="shared/toolbar.css"/>
-  <link rel="stylesheet" type="text/css" href="shared/pdf_viewer.css"/>
+  <link rel="stylesheet" type="text/css" href="shared/toolbar.css" />
+  <link rel="stylesheet" type="text/css" href="shared/pdf_viewer.css" />
   <style type="text/css">
     body {
       background-color: #eee;
@@ -15,6 +16,7 @@
     .pdfViewer .canvasWrapper {
       box-shadow: 0 0 3px #bbb;
     }
+
     .pdfViewer .page {
       margin-bottom: 10px;
     }
@@ -46,9 +48,11 @@
       background: #eaeaea;
       border-left: 1px solid #d0d0d0;
     }
+
     #comment-wrapper h4 {
       margin: 10px;
     }
+
     #comment-wrapper .comment-list {
       font-size: 12px;
       position: absolute;
@@ -57,10 +61,12 @@
       right: 0;
       bottom: 0;
     }
+
     #comment-wrapper .comment-list-item {
       border-bottom: 1px solid #d0d0d0;
       padding: 10px;
     }
+
     #comment-wrapper .comment-list-container {
       position: absolute;
       top: 0;
@@ -69,6 +75,7 @@
       bottom: 47px;
       overflow: auto;
     }
+
     #comment-wrapper .comment-list-form {
       position: absolute;
       left: 0;
@@ -76,12 +83,14 @@
       bottom: 0;
       padding: 10px;
     }
+
     #comment-wrapper .comment-list-form input {
       padding: 5px;
       width: 100%;
     }
   </style>
 </head>
+
 <body>
   <div class="toolbar">
     <button class="cursor" type="button" title="Cursor" data-tooltype="cursor">➚</button>
@@ -131,6 +140,11 @@
     <div class="spacer"></div>
 
     <a href="javascript://" class="clear" title="Clear Annotations">×</a>
+
+    <div class="spacer"></div>
+
+    <button type="button" id="exportJson" name="toJson">exportJson</button>
+    <button type="button" id="importJson" name="toJson">importJson</button>
   </div>
   <div id="content-wrapper">
     <div id="viewer" class="pdfViewer"></div>
@@ -142,7 +156,7 @@
         <div class="comment-list-item">No comments</div>
       </div>
       <form class="comment-list-form" style="display:none;">
-        <input type="text" placeholder="Add a Comment"/>
+        <input type="text" placeholder="Add a Comment" />
       </form>
     </div>
   </div>
@@ -150,6 +164,5 @@
   <script src="shared/pdf_viewer.js"></script>
   <script src="__build__/index.js"></script>
 </body>
+
 </html>
-
-
