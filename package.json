@@ -6,11 +6,14 @@
   "scripts": {
     "test": "karma start --single-run",
     "start": "./scripts/web",
+    "startWin": "start .\\scripts\\web.bat",
     "lint": "./node_modules/.bin/eslint .",
     "startindocker": "./scripts/web-docker",
     "build": "webpack && MINIFY=1 webpack",
+    "buildWin": "webpack && set MINIFY=1&& webpack",
     "codecov": "codecov",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepublishOnlyWin": "npm run buildWin"
   },
   "repository": {
     "type": "git",
